@@ -1,24 +1,22 @@
 import useClock from "../../hooks/useClock"
 
-
-const LocalClock = () =>{
-
-
-    const {clock : est} = useClock('EST')
-    const {clock : pst} = useClock('PST')
-    const {clock : utc} = useClock('UTC')
-  
-
-
-    console.log('EST' , est.date)
-    console.log('PST' , pst.date)
-    console.log('UTC' , utc.date)
+import ClockDisplay from "../shared"
+const LocalClock = ({date,timezone,offset}) =>{
     
-
     return (
         <div>
-            <h1>I'm local clock</h1>
-        </div>
+             <h1>This is local</h1>
+
+             <ClockDisplay
+             
+             date={date}
+             title = {'Tomar ammure ami aunty daki'}
+             timezone={timezone}
+             offset={offset}
+             />
+             
+           
+         </div>
     )
 }
 
